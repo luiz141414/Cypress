@@ -22,4 +22,5 @@ describe('template spec', () => {
   it('login', () => {
     cy.login()
   })
+  
 })

@@ -13,7 +13,7 @@ describe('template spec', () => {
 
 
 
-  it('cadastro', () => {
+  it.only('cadastro', () => {
     cy.cadatrarUsuarioUsernameEmail()
     cy.cadatrarUsuarioFormulario()
     cy.fecharPopUp()
@@ -22,5 +22,5 @@ describe('template spec', () => {
   it('login', () => {
     cy.login()
   })
-  
+
 })

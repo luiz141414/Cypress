@@ -30,6 +30,15 @@ jobs:
           CYPRESS_MAILOSAUR_SERVER_ID: ${{ secrets.CYPRESS_MAILOSAUR_SERVER_ID }}
           CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_MAILOSAUR_API_KEY }}
         with:
-          record: true
-          command: npm test
+        command: npm test
+      - name: Gravar vídeo
+      - uses: cypress-io/github-action@v4
+
+        with:
+         record: true
+       - name: Upload de artifact
+       - uses: actions/upload-artifact@v3
+        with:
+      - name: cypress-videos
+        path: cypress/videos
           

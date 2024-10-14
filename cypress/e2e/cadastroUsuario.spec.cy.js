@@ -19,7 +19,7 @@ describe('template spec', () => {
     cy.fecharPopUp()
   })
 
-  it.only('login', () => {
+  it('login', () => {
     cy.login()
   })
 

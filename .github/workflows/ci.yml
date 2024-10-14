@@ -1,5 +1,3 @@
-# .github/workflows/ci.yml
-
 name: ci
 
 on:
@@ -30,15 +28,18 @@ jobs:
           CYPRESS_MAILOSAUR_SERVER_ID: ${{ secrets.CYPRESS_MAILOSAUR_SERVER_ID }}
           CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_MAILOSAUR_API_KEY }}
         with:
-        command: npm test
+          record: true
+          command: npm test
+      
       - name: Gravar vídeo
-      - uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v5
+        with:
+          record: true
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: cypress/videos
 
-        with:
-         record: true
-       - name: Upload de artifact
-       - uses: actions/upload-artifact@v3
-        with:
-      - name: cypress-videos
-        path: cypress/videos
           

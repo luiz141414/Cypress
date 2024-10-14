@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'seu-project-id-gerado',
   extends: ['plugin:cypress/recommended'],
   rules: {
     'no-unused-vars': ['error', { 'varsIgnorePattern': '^cy$' }]

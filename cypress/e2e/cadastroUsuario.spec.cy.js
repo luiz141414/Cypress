@@ -13,13 +13,13 @@ describe('template spec', () => {
 
 
 
-  it.only('cadastro', () => {
+  it('cadastro', () => {
     cy.cadatrarUsuarioUsernameEmail()
     cy.cadatrarUsuarioFormulario()
     cy.fecharPopUp()
   })
 
-  it('login', () => {
+  it.only('login', () => {
     cy.login()
   })
 

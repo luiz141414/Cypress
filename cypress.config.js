@@ -6,6 +6,7 @@ module.exports = defineConfig({
     'no-unused-vars': ['error', { 'varsIgnorePattern': '^cy$' }]
   },
   e2e: {
+    video : true,
     env:{
       // Define your custom environment variables here
       'cypress/globals': true,
